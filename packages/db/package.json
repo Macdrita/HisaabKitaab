@@ -6,14 +6,20 @@
   "types": "./src/index.ts",
   "scripts": {
     "db:generate": "prisma generate",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "lint": "eslint \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@prisma/client": "^5.10.0"
   },
   "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/prettier-config": "*",
     "@repo/tsconfig": "*",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.0",
     "prisma": "^5.10.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.3.3"
   }
 }
